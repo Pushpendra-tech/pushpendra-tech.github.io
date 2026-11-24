@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pushpendra Singh – AI &amp; Machine Learning Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF2F7; --surface:#FFFFFF; --ink:#14213D; --muted:#4A5873; --line:#CBD5E3; --accent:#2B59FF; --accent-ink:#FFFFFF; --mask:rgba(43,89,255,.85); --grid:rgba(20,33,61,.08);
+  --head:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif; --body:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+  color-scheme:light;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0F1626;--surface:#17213A;--ink:#E8EEFB;--muted:#9FB0CF;--line:#2B3858;--accent:#7C9BFF;--accent-ink:#0F1626;--mask:rgba(124,155,255,.85);--grid:rgba(232,238,251,.08);color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0F1626;--surface:#17213A;--ink:#E8EEFB;--muted:#9FB0CF;--line:#2B3858;--accent:#7C9BFF;--accent-ink:#0F1626;--mask:rgba(124,155,255,.85);--grid:rgba(232,238,251,.08);color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--body)}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.25rem}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:1.25rem;align-items:center;overflow-x:auto;padding-top:.7rem;padding-bottom:.7rem;white-space:nowrap}
+nav a{color:var(--ink);text-decoration:none;font-weight:500;font-size:.95rem}
+nav a:hover{color:var(--accent)}
+nav .brand{font-family:var(--head);font-weight:800;margin-right:auto}
+#theme{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:.3rem .8rem;font:inherit;font-size:.85rem;cursor:pointer}
+header.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+#mask{position:absolute;inset:0;width:100%;height:100%}
+.hero .wrap{position:relative;padding-top:5rem;padding-bottom:4.5rem;pointer-events:none}
+.hero a{pointer-events:auto}
+.hero h1{font:800 clamp(2.8rem,9vw,6rem)/.98 var(--head);letter-spacing:-.03em;margin:0 0 1.2rem}
+.hero .role{font:500 clamp(1.15rem,3vw,1.5rem)/1.3 var(--head);margin:0 0 1rem}
+.hero p.lead{max-width:38rem;color:var(--muted);margin:0 0 1.6rem}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem}
+.btn{display:inline-block;padding:.65rem 1.2rem;border-radius:.4rem;font-weight:500;text-decoration:none;border:1.5px solid var(--ink);color:var(--ink);background:var(--bg)}
+.btn.main{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+section{padding:3.5rem 0;border-bottom:1px solid var(--line)}
+h2{font:700 clamp(1.7rem,4vw,2.3rem)/1.1 var(--head);letter-spacing:-.02em;margin:0 0 1.6rem}
+h3{font:700 1.2rem/1.3 var(--head);margin:0}
+.meta{color:var(--muted);font-size:.95rem;margin:.2rem 0 .6rem}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1.2rem 2rem}
+.skills h3{font-size:1rem;margin-bottom:.4rem}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:0;padding:0;list-style:none}
+.chips li{background:var(--surface);border:1px solid var(--line);border-radius:.3rem;padding:.15rem .6rem;font-size:.92rem}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));gap:1.2rem}
+.proj{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--accent);padding:1.2rem 1.3rem}
+.proj:first-child{grid-column:1/-1}
+.proj p{margin:.5rem 0 0;color:var(--muted)}
+.tl{border-left:2px solid var(--line);padding-left:1.4rem;margin:0;list-style:none}
+.tl>li{position:relative;padding-bottom:1.6rem}
+.tl>li:last-child{padding-bottom:0}
+.tl>li::before{content:"";position:absolute;left:calc(-1.4rem - 7px);top:.5rem;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.certs{list-style:none;margin:0;padding:0;display:grid;gap:.7rem}
+.certs li{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;background:var(--surface);border:1px solid var(--line);padding:.8rem 1rem}
+footer{padding:3rem 0 4rem}
+.contact{display:flex;flex-wrap:wrap;gap:.7rem}
+small{color:var(--muted)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.proj{cursor:pointer}.proj:hover{border-left-color:var(--ink)}
+.go{display:inline-block;margin-top:.7rem;font-weight:500;color:var(--accent)}
+dialog{font:inherit;border:1px solid var(--line);background:var(--bg);color:var(--ink);max-width:46rem;width:calc(100% - 2rem);padding:0;border-radius:.4rem}
+dialog::backdrop{background:rgba(10,15,30,.6)}
+.dh{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.9rem 1.25rem;border-bottom:1px solid var(--line)}
+.db{padding:1.25rem;max-height:75vh;overflow:auto}
+.db p{margin:.2rem 0 .8rem}
+.db input[type=text],.db input[type=number],.db select{padding:.35rem .5rem;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;border-radius:.25rem}
+.db input[type=number]{width:5.5rem}
+.row{display:flex;flex-wrap:wrap;gap:.6rem 1rem;align-items:center;margin:.7rem 0}
+.sm{padding:.35rem .8rem;font:inherit;cursor:pointer}
+canvas.v{width:100%;height:auto;display:block;background:#000}
+.t{width:100%;border-collapse:collapse;font-size:.95rem}.t th,.t td{padding:.4rem .5rem;border-bottom:1px solid var(--line);text-align:left}
+.tw{overflow-x:auto}
+.bar{height:8px;background:var(--line);margin:.3rem 0}.bar i{display:block;height:100%;background:var(--accent)}
+.mv{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:.5rem 1rem}
+.mv label{display:flex;justify-content:space-between;gap:.5rem;align-items:center}
+.err{color:#C62828}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .err{color:#FF8A80}}
+:root[data-theme="dark"] .err{color:#FF8A80}
+pre{overflow-x:auto;background:var(--surface);border:1px solid var(--line);padding:.7rem;font-size:.85rem}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <span class="brand">Pushpendra Singh</span>
+  <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a>
+  <button id="theme" type="button" aria-label="Toggle light or dark theme">Theme</button>
+</div></nav>
+
+<header class="hero">
+  <canvas id="mask" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <h1>Pushpendra Singh</h1>
+    <p class="role">AI Engineer · Machine Learning Engineer · Python Developer</p>
+    <p class="lead">B.Tech graduate in Artificial Intelligence who builds computer vision tools, recommendation systems and database-driven applications.</p>
+    <div class="btns">
+      <a class="btn main" href="#projects">See my projects</a>
+      <a class="btn" href="mailto:pushpendrathakur9968@gmail.com">Email me</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="about"><div class="wrap">
+  <h2>About</h2>
+  <p style="max-width:42rem">B.Tech graduate in Artificial Intelligence with strong foundations in Python, Machine Learning, SQL, Computer Vision, and PySpark. I have built recommendation systems, object detection models, and database-driven tools. I’m skilled in data analysis, model training, and scalable data processing using NumPy, Pandas, Matplotlib, OpenCV, and PySpark.</p>
+  <p style="max-width:42rem"><strong>Looking for:</strong> an entry-level role as AI Engineer, Machine Learning Engineer, or Python Developer.</p>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Technical skills</h2>
+  <div class="skills">
+    <div><h3>Programming</h3><ul class="chips"><li>Python</li><li>SQL</li><li>JavaScript</li><li>TypeScript</li></ul></div>
+    <div><h3>Data processing</h3><ul class="chips"><li>PySpark</li></ul></div>
+    <div><h3>Machine learning</h3><ul class="chips"><li>Supervised Learning</li><li>Unsupervised Learning</li><li>Feature Engineering</li><li>Model Training</li></ul></div>
+    <div><h3>Libraries</h3><ul class="chips"><li>NumPy</li><li>Pandas</li><li>Matplotlib</li><li>Seaborn</li><li>OpenCV</li></ul></div>
+    <div><h3>Databases</h3><ul class="chips"><li>MySQL</li></ul></div>
+    <div><h3>Tools</h3><ul class="chips"><li>Git</li><li>GitHub</li><li>Jupyter Notebook</li><li>Google Colab</li><li>VS Code</li></ul></div>
+    <div><h3>Concepts</h3><ul class="chips"><li>Data Structures</li><li>OOP</li><li>Data Analysis</li><li>Algorithms</li></ul></div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2>Projects</h2>
+  <p style="max-width:42rem;margin-top:-.8rem">Select a project to open a working demo. Each one runs in your browser on a small dataset I made for it.</p>
+  <div class="projects">
+    <article class="proj" data-demo="liveos" tabindex="0" role="button"><h3>Live Video Object Segmentation (LIVEOS)</h3><p class="meta">Python, OpenCV</p><p>A real-time object segmentation system. I used computer vision techniques for object detection and improved frame processing for real-time performance.</p></article>
+    <article class="proj" data-demo="movies" tabindex="0" role="button"><h3>Movie Recommendation System</h3><p class="meta">Python, SQL</p><p>A collaborative-filtering recommendation engine with SQL database integration for personalized suggestions.</p></article>
+    <article class="proj" data-demo="grades" tabindex="0" role="button"><h3>Student Grades Portal</h3><p class="meta">Python, MySQL</p><p>A grading portal with Python backend logic and a normalized MySQL schema for efficient academic data storage.</p></article>
+    <article class="proj" data-demo="pass" tabindex="0" role="button"><h3>Password Generator</h3><p class="meta">Python, command line</p><p>A command-line application that generates strong random passwords, with validation logic.</p></article>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <h2>Experience</h2>
+  <ul class="tl"><li>
+    <h3>Data Entry and Data Analytics Intern</h3>
+    <p class="meta">Tech LearnIt · Oct 2024 – Mar 2025</p>
+    <ul style="margin:0;padding-left:1.1rem"><li>Cleaned and filtered raw spreadsheets by removing duplicates, blanks, and invalid entries, improving data accuracy before analysis.</li><li>Extracted targeted subsets using filters to help the team track key metrics.</li><li>Summarized filtered data into clear tables or charts so stakeholders could quickly spot key trends or issues.</li></ul>
+  </li></ul>
+</div></section>
+
+<section id="education"><div class="wrap">
+  <h2>Education</h2>
+  <ul class="tl">
+    <li><h3>B.Tech, Artificial Intelligence</h3><p class="meta">Gautam Buddha University, Greater Noida · 2024</p><p style="margin:0">GPA: 7.8/10</p></li>
+    <li><h3>Class 12, CBSE (Science)</h3><p class="meta">Satyug Darshan Vidyalaya, Faridabad · 2020</p><p style="margin:0">72.83%</p></li>
+    <li><h3>Class 10, CBSE</h3><p class="meta">Satyug Darshan Vidyalaya, Faridabad · 2018</p><p style="margin:0">62.46%</p></li>
+  </ul>
+</div></section>
+
+<section id="certifications"><div class="wrap">
+  <h2>Certifications</h2>
+  <ul class="certs">
+    <li><span><strong>Machine Learning with Python</strong> – NumPy, Pandas, Matplotlib, Seaborn</span><a href="https://github.com/Pushpendra-tech/certificates/tree/main" target="_blank" rel="noopener">View certificate</a></li>
+    <li><span><strong>SQL for Data Science</strong> – Joins, Subqueries, Data Analysis</span><a href="https://github.com/Pushpendra-tech/certificates/tree/main" target="_blank" rel="noopener">View certificate</a></li>
+    <li><span><strong>Infosys</strong> – Python for Data Science</span><a href="https://github.com/Pushpendra-tech/certificates/tree/main" target="_blank" rel="noopener">View certificate</a></li>
+    <li><span><strong>Udemy</strong> – Complete Python Bootcamp (Zero to Hero)</span><a href="https://github.com/Pushpendra-tech/certificates/tree/main" target="_blank" rel="noopener">View certificate</a></li>
+  </ul>
+</div></section>
+</main>
+
+<footer id="contact"><div class="wrap">
+  <h2>Contact</h2>
+  <div class="contact">
+    <a class="btn main" href="mailto:pushpendrathakur9968@gmail.com">pushpendrathakur9968@gmail.com</a>
+    <a class="btn" href="tel:+919968481911">+91 9968481911</a>
+    <a class="btn" href="https://www.linkedin.com/in/pushpendra-singh-b15774217/" id="li" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/Pushpendra-tech" id="gh" target="_blank" rel="noopener">GitHub</a>
+  </div>
+  <p><small>© 2026 Pushpendra Singh</small></p>
+</div></footer>
+
+<script>
+(function(){
+  // Theme toggle
+  var root=document.documentElement, btn=document.getElementById('theme');
+  btn.addEventListener('click',function(){
+    var dark=getComputedStyle(root).colorScheme==='dark';
+    root.setAttribute('data-theme',dark?'light':'dark');
+    draw();
+  });
+
+  // Hero: a grid of cells that "segments" the area under the pointer
+  var cv=document.getElementById('mask'), ctx=cv.getContext('2d'), S=24, W=0,H=0, px=-999, py=-999, t=0;
+  var still=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function size(){
+    var r=cv.getBoundingClientRect(), d=window.devicePixelRatio||1;
+    W=r.width;H=r.height;cv.width=W*d;cv.height=H*d;ctx.setTransform(d,0,0,d,0,0);draw();
+  }
+  function draw(){
+    var cs=getComputedStyle(root), grid=cs.getPropertyValue('--grid'), mask=cs.getPropertyValue('--mask');
+    ctx.clearRect(0,0,W,H);
+    var cx=px,cy=py;
+    if(cx<0){cx=W*.78+Math.cos(t)*W*.08;cy=H*.5+Math.sin(t*1.3)*H*.18}
+    for(var x=0;x<W;x+=S){for(var y=0;y<H;y+=S){
+      var dx=x+S/2-cx, dy=y+S/2-cy, d=Math.sqrt(dx*dx+dy*dy), edge=110+Math.sin(x*.07+y*.05+t*2)*28;
+      if(d<edge){ctx.fillStyle=mask;ctx.globalAlpha=d<edge-30?.9:.35;ctx.fillRect(x+2,y+2,S-4,S-4)}
+      else{ctx.fillStyle=grid;ctx.globalAlpha=1;ctx.fillRect(x+S/2-1,y+S/2-1,2,2)}
+    }}
+    ctx.globalAlpha=1;
+  }
+  function tick(){t+=.012;draw();requestAnimationFrame(tick)}
+  var hero=document.querySelector('.hero');
+  hero.addEventListener('pointermove',function(e){var r=cv.getBoundingClientRect();px=e.clientX-r.left;py=e.clientY-r.top;if(still)draw()});
+  hero.addEventListener('pointerleave',function(){px=-999;py=-999;if(still)draw()});
+  window.addEventListener('resize',size);
+  size();
+  if(!still)requestAnimationFrame(tick);
+})();
+</script>
+<dialog id="dlg" aria-labelledby="dt"><div class="dh"><h3 id="dt"></h3><button type="button" class="btn sm" id="dx">Close</button></div><div class="db" id="dbody"></div></dialog>
+<script>
+(function(){
+var dlg=document.getElementById('dlg'),title=document.getElementById('dt'),body=document.getElementById('dbody'),stop=null;
+function esc(t){return String(t).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+var names={liveos:'LIVEOS: live object segmentation',movies:'Movie recommendation system',grades:'Student grades portal',pass:'Password generator'};
+var demos={liveos:liveos,movies:movies,grades:grades,pass:pass};
+document.querySelectorAll('.proj').forEach(function(c){
+  var k=c.dataset.demo,g=document.createElement('span');g.className='go';g.textContent='Try the demo';c.appendChild(g);
+  function open(){title.textContent=names[k];body.innerHTML='';demos[k](body);dlg.showModal()}
+  c.addEventListener('click',open);
+  c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}});
+});
+dlg.addEventListener('close',function(){if(stop){stop();stop=null}body.innerHTML=''});
+document.getElementById('dx').onclick=function(){dlg.close()};
+
+function liveos(el){
+  el.innerHTML='<p>A simulated camera feed: three objects move over a noisy background. The program learns the empty background, subtracts it from each frame, thresholds the difference and draws the mask and bounding boxes. These are the same steps as in the OpenCV version that runs on a real webcam.</p><canvas class="v" width="320" height="180"></canvas><div class="row"><label><input type="radio" name="m" value="0"> Camera feed</label><label><input type="radio" name="m" value="1" checked> Mask</label><label><input type="radio" name="m" value="2"> Bounding boxes</label><label>Threshold <input type="range" id="th" min="10" max="120" value="50"></label><span id="fps"></span></div><p>Lower the threshold and sensor noise starts to leak into the mask. Raise it too far and the objects break up.</p>';
+  var cv=el.querySelector('canvas'),c=cv.getContext('2d'),W=320,H=180,cols=40,rows=23;
+  var bg=document.createElement('canvas');bg.width=W;bg.height=H;var b=bg.getContext('2d');
+  var gr=b.createLinearGradient(0,0,W,H);gr.addColorStop(0,'#3b4a63');gr.addColorStop(1,'#6b7f99');b.fillStyle=gr;b.fillRect(0,0,W,H);
+  for(var i=0;i<300;i++){b.fillStyle='rgba(255,255,255,.06)';b.fillRect(Math.random()*W,Math.random()*H,6,6)}
+  var bd=b.getImageData(0,0,W,H).data,fr=document.createElement('canvas');fr.width=W;fr.height=H;var f=fr.getContext('2d');
+  var ob=[{x:60,y:50,vx:1.6,vy:1.1,r:22,c:'#ff7a59'},{x:200,y:100,vx:-1.2,vy:1.4,r:28,c:'#ffd23f'},{x:140,y:140,vx:1,vy:-1.3,r:18,c:'#5be7a9'}];
+  var run=true,n=0,t0=performance.now();
+  function loop(){
+    if(!run)return;
+    f.drawImage(bg,0,0);
+    ob.forEach(function(o){o.x+=o.vx;o.y+=o.vy;if(o.x<o.r||o.x>W-o.r)o.vx*=-1;if(o.y<o.r||o.y>H-o.r)o.vy*=-1;f.fillStyle=o.c;f.beginPath();f.arc(o.x,o.y,o.r,0,7);f.fill()});
+    var d=f.getImageData(0,0,W,H).data,th=+el.querySelector('#th').value,mode=+el.querySelector('input[name=m]:checked').value;
+    var cnt=new Uint8Array(cols*rows),out=mode===1?c.createImageData(W,H):null;
+    for(var p=0;p<d.length;p+=4){
+      var df=(Math.abs(d[p]-bd[p])+Math.abs(d[p+1]-bd[p+1])+Math.abs(d[p+2]-bd[p+2]))/3+Math.random()*12;
+      if(df>th){var q=p>>2;cnt[((q/W|0)>>3)*cols+((q%W)>>3)]++;if(out){out.data[p]=out.data[p+1]=out.data[p+2]=255;out.data[p+3]=255}}
+      else if(out)out.data[p+3]=255;
+    }
+    if(mode===1)c.putImageData(out,0,0);else c.drawImage(fr,0,0);
+    if(mode===2){
+      var on=Array.prototype.map.call(cnt,function(v){return v>16?1:0}),seen=new Uint8Array(cols*rows);
+      for(var s=0;s<on.length;s++){
+        if(!on[s]||seen[s])continue;
+        var st=[s],x0=cols,y0=rows,x1=0,y1=0;seen[s]=1;
+        while(st.length){
+          var k=st.pop(),x=k%cols,y=k/cols|0;
+          x0=Math.min(x0,x);x1=Math.max(x1,x);y0=Math.min(y0,y);y1=Math.max(y1,y);
+          [[1,0],[-1,0],[0,1],[0,-1]].forEach(function(dd){var nx=x+dd[0],ny=y+dd[1],j=ny*cols+nx;if(nx>=0&&ny>=0&&nx<cols&&ny<rows&&on[j]&&!seen[j]){seen[j]=1;st.push(j)}});
+        }
+        if((x1-x0+1)*(y1-y0+1)>3){c.strokeStyle='#00e0ff';c.lineWidth=2;c.strokeRect(x0*8,y0*8,(x1-x0+1)*8,(y1-y0+1)*8)}
+      }
+    }
+    n++;var now=performance.now();
+    if(now-t0>500){el.querySelector('#fps').textContent=Math.round(n*1000/(now-t0))+' frames per second';n=0;t0=now}
+    requestAnimationFrame(loop);
+  }
+  stop=function(){run=false};loop();
+}
+
+function movies(el){
+  var M=['Inception','The Matrix','Interstellar','Toy Story','Finding Nemo','The Notebook','Titanic','John Wick','Mad Max: Fury Road','Up'];
+  var U=[[5,5,4,0,0,1,0,4,5,0],[4,5,5,1,0,0,2,3,4,0],[0,1,0,5,5,3,2,0,0,5],[1,0,2,5,4,0,3,0,1,5],[0,2,0,0,3,5,5,1,0,3],[2,0,1,3,0,5,4,0,2,0],[5,4,0,0,0,0,1,5,5,2],[0,0,2,4,5,2,0,0,0,4]];
+  el.innerHTML='<p>Rate the movies you have seen (0 means not seen). The engine finds the 8 sample users with the most similar taste, using cosine similarity, and predicts your rating for the movies you have not seen. This is user-based collaborative filtering.</p><div class="row"><button type="button" class="btn sm" data-p="5,4,5,1,0,0,0,3,4,0">Sci-fi and action fan</button><button type="button" class="btn sm" data-p="0,0,0,5,5,0,0,0,0,5">Family fan</button><button type="button" class="btn sm" data-p="0,0,0,0,0,5,5,0,0,2">Romance fan</button></div><div class="mv">'+M.map(function(t){return '<label>'+esc(t)+'<select>'+[0,1,2,3,4,5].map(function(i){return '<option>'+i+'</option>'}).join('')+'</select></label>'}).join('')+'</div><div id="mr" aria-live="polite"></div>';
+  var sel=el.querySelectorAll('select'),mr=el.querySelector('#mr');
+  function cos(a,b){var d=0,x=0,y=0;for(var i=0;i<a.length;i++){d+=a[i]*b[i];x+=a[i]*a[i];y+=b[i]*b[i]}return x&&y?d/Math.sqrt(x*y):0}
+  function rec(){
+    var v=[].map.call(sel,function(q){return +q.value});
+    if(!v.some(Boolean)){mr.innerHTML='<p>Rate at least one movie to get recommendations.</p>';return}
+    var sims=U.map(function(u,i){return {n:'User '+(i+1),s:cos(v,u)}}),out=[];
+    M.forEach(function(t,j){if(v[j])return;var a=0,d=0;U.forEach(function(u,i){if(u[j]){a+=sims[i].s*u[j];d+=sims[i].s}});if(d)out.push({t:t,p:a/d})});
+    out.sort(function(a,b){return b.p-a.p});
+    var nb=sims.slice().sort(function(a,b){return b.s-a.s}).slice(0,3);
+    mr.innerHTML='<h3 style="margin:1rem 0 .4rem">Recommended for you</h3>'+(out.length?out.slice(0,4).map(function(o){return '<div>'+esc(o.t)+' <small>predicted '+o.p.toFixed(1)+' of 5</small><div class="bar"><i style="width:'+o.p*20+'%"></i></div></div>'}).join(''):'<p>You have rated every movie. Set some back to 0.</p>')+'<p><small>Most similar users: '+nb.map(function(x){return x.n+' ('+Math.round(x.s*100)+'%)'}).join(', ')+'</small></p>';
+  }
+  sel.forEach(function(q){q.addEventListener('change',rec)});
+  el.querySelectorAll('[data-p]').forEach(function(bt){bt.onclick=function(){bt.dataset.p.split(',').forEach(function(x,i){sel[i].value=x});rec()}});
+  rec();
+}
+
+function grades(el){
+  var S=[['Aarav',88,92,85],['Diya',76,81,90],['Kabir',64,58,70],['Meera',95,97,93],['Rohan',45,52,48]],sub=['Maths','Python','DBMS'];
+  el.innerHTML='<p>Add a student and their marks out of 100. The portal calculates the average, grade and class rank, like the Python and MySQL version.</p><div class="row"><input id="gn" type="text" placeholder="Student name" aria-label="Student name">'+sub.map(function(x){return '<input class="gm" type="number" min="0" max="100" placeholder="'+x+'" aria-label="'+x+' marks">'}).join('')+'<button type="button" class="btn main sm" id="ga">Add student</button></div><p id="ge" class="err" role="alert"></p><div class="tw" id="gt"></div><details><summary>Database schema</summary><pre>students(id, name)\nsubjects(id, name)\nmarks(student_id, subject_id, score)</pre></details>';
+  function gr(a){return a>=90?'A+':a>=80?'A':a>=70?'B':a>=60?'C':a>=50?'D':'F'}
+  function show(){
+    var R=S.map(function(s){return {n:s[0],m:s.slice(1),a:(s[1]+s[2]+s[3])/3}}).sort(function(a,b){return b.a-a.a}),tot=0;
+    var h='<table class="t"><tr><th>Rank</th><th>Name</th>'+sub.map(function(x){return '<th>'+x+'</th>'}).join('')+'<th>Average</th><th>Grade</th></tr>';
+    R.forEach(function(r,i){tot+=r.a;h+='<tr><td>'+(i+1)+'</td><td>'+esc(r.n)+'</td>'+r.m.map(function(x){return '<td>'+x+'</td>'}).join('')+'<td>'+r.a.toFixed(1)+'</td><td>'+gr(r.a)+'</td></tr>'});
+    el.querySelector('#gt').innerHTML=h+'</table><p><small>Class average '+(tot/R.length).toFixed(1)+'. Topper: '+esc(R[0].n)+'.</small></p>';
+  }
+  el.querySelector('#ga').onclick=function(){
+    var n=el.querySelector('#gn').value.trim(),m=[].map.call(el.querySelectorAll('.gm'),function(i){return i.value===''?NaN:+i.value}),e=el.querySelector('#ge');
+    if(!n){e.textContent='Enter the student name.';return}
+    if(m.some(function(x){return isNaN(x)||x<0||x>100})){e.textContent='Enter all three marks as numbers from 0 to 100.';return}
+    e.textContent='';S.push([n].concat(m));el.querySelector('#gn').value='';el.querySelectorAll('.gm').forEach(function(i){i.value=''});show();
+  };
+  show();
+}
+
+function pass(el){
+  var sets={Uppercase:'ABCDEFGHIJKLMNOPQRSTUVWXYZ',Lowercase:'abcdefghijklmnopqrstuvwxyz',Digits:'0123456789',Symbols:'!@#$%^&*()-_=+[]{};:,.?'};
+  el.innerHTML='<p>Generates a random password with the browser secure random generator. It always includes at least one character from every type you select, then shuffles the result.</p><div class="row"><label>Length <input type="range" id="pl" min="8" max="32" value="16"> <b id="pv">16</b></label></div><div class="row">'+Object.keys(sets).map(function(k){return '<label><input type="checkbox" class="ps" value="'+k+'" checked> '+k+'</label>'}).join('')+'</div><div class="row"><input type="text" id="po" readonly aria-label="Generated password" style="flex:1;min-width:12rem;font:1rem monospace"><button type="button" class="btn main sm" id="pg">Generate</button><button type="button" class="btn sm" id="pc">Copy</button></div><div class="bar"><i id="pb" style="width:0"></i></div><p id="pm" role="status"></p>';
+  function rnd(n){return crypto.getRandomValues(new Uint32Array(1))[0]%n}
+  function gen(){
+    var len=+el.querySelector('#pl').value,ch=[].filter.call(el.querySelectorAll('.ps'),function(c){return c.checked}).map(function(c){return sets[c.value]}),pm=el.querySelector('#pm');
+    el.querySelector('#pv').textContent=len;
+    if(!ch.length){pm.className='err';pm.textContent='Select at least one character type.';return}
+    pm.className='';
+    var pool=ch.join(''),a=ch.map(function(x){return x[rnd(x.length)]});
+    while(a.length<len)a.push(pool[rnd(pool.length)]);
+    for(var i=a.length-1;i>0;i--){var j=rnd(i+1),t=a[i];a[i]=a[j];a[j]=t}
+    el.querySelector('#po').value=a.join('');
+    var bits=len*Math.log2(pool.length);
+    el.querySelector('#pb').style.width=Math.min(100,bits/1.28)+'%';
+    pm.textContent=(bits<40?'Weak':bits<60?'Fair':bits<80?'Strong':'Very strong')+' (about '+Math.round(bits)+' bits of entropy)';
+  }
+  el.querySelector('#pg').onclick=gen;el.querySelector('#pl').oninput=gen;
+  el.querySelectorAll('.ps').forEach(function(c){c.onchange=gen});
+  el.querySelector('#pc').onclick=function(){var v=el.querySelector('#po').value,pm=el.querySelector('#pm');if(!v)return;try{navigator.clipboard.writeText(v).then(function(){pm.textContent='Copied.'},function(){el.querySelector('#po').select()})}catch(e){el.querySelector('#po').select()}};
+  gen();
+}
+})();
+</script>
+</body>
+</html>
